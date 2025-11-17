@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "eact-native-expo-tutorial",
-    "slug": "eact-native-expo-tutorial",
+    "name": "react-native-expo-tutorial",
+    "slug": "react-native-expo-tutorial",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",

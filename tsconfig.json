@@ -1,5 +1,4 @@
 {
-  // "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "types": ["react", "react-native"],
     "allowJs": true,
@@ -28,5 +27,6 @@
     "babel.config.cjs",
     "metro.config.js"
   ],
-  "exclude": ["node_modules", "jest.config.js"]
+  "exclude": ["node_modules", "jest.config.js"],
+  "extends": "expo/tsconfig.base"
 }
