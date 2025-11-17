@@ -1,11 +1,10 @@
-// https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require("eslint/config");
-const expoConfig = require("eslint-config-expo/flat");
-const tsPlugin = require("@typescript-eslint/eslint-plugin");
+import tsPlugin from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import expoConfig from "eslint-config-expo/flat.js";
 
-module.exports = defineConfig([
+export default [
   // Expo が提供する Flat Config 用の共有設定の読込み
-  expoConfig,
+  ...expoConfig,
   {
     ignores: ["dist/*"],
     // TypeScript ESLint プラグインの明示的読込み
@@ -16,7 +15,8 @@ module.exports = defineConfig([
     // TypeScript 用のパーサーを指定
     // TypeScript の構文を ESLint が正しく解析できるようにするため
     languageOptions: {
-      parser: require("@typescript-eslint/parser"),
+      // parser: require("@typescript-eslint/parser"),
+      parser: tsParser,
     },
     // ルールの追加・上書き
     // チュートリアル通りに "import type" を推奨するルールを有効化
@@ -24,4 +24,4 @@ module.exports = defineConfig([
       "@typescript-eslint/consistent-type-imports": ["warn"],
     },
   },
-]);
+];

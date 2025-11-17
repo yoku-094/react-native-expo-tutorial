@@ -1,6 +1,7 @@
 {
-  "name": "eact-native-expo-tutorial",
+  "name": "react-native-expo-tutorial",
   "version": "1.0.0",
+  "type": "module",
   "main": "src/screens/app.tsx",
   "scripts": {
     "start": "expo start",
