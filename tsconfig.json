@@ -2,6 +2,7 @@
   "compilerOptions": {
     "types": ["react", "react-native"],
     "allowJs": true,
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "jsx": "react-native",
     "lib": ["DOM", "ESNext"],
