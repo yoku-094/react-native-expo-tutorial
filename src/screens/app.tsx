@@ -8,6 +8,7 @@ import { Button } from "@/components/button.tsx";
 import { CircleButton } from "@/components/circle-button.tsx";
 import { EmojiList } from "@/components/emoji-list.tsx";
 import { EmojiPicker } from "@/components/emoji-picker.tsx";
+import { EmojiSticker } from "@/components/emoji-sticker.tsx";
 import { IconButton } from "@/components/icon-button.tsx";
 import { ImageViewer } from "@/components/image-viewer.tsx";
 
@@ -59,6 +60,9 @@ const App: FC = () => {
           placeholderImageSource={PlaceholderImage}
           selectedImage={selectedImage}
         />
+        {pickedEmoji && (
+          <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
+        )}
       </View>
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
         <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
